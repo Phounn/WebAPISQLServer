@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "MUzxgFeP8ljwQONtcBrpse+rMvNFkRStqFLdznrcgrE=",
+  "Source": "template_swagger",
+  "BasePath": "_content/template_swagger",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
