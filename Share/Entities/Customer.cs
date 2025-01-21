@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Data.Models
+namespace Share.Entities
 {
     public class Customer
     {
@@ -16,6 +16,5 @@ namespace Data.Models
         public string? Phone { get; set; }
 
         public ICollection<Order> Orders { get; set; } = null!;
-
     }
 }

@@ -1,13 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIGateWay", "APIGateWay\APIGateWay.csproj", "{A569AD85-4358-42B2-A548-AE14D59B4262}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6AF1EC87-418A-4647-B263-FBA853A5CB22} = {6AF1EC87-418A-4647-B263-FBA853A5CB22}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{11454265-F534-4141-B01C-4FD47E2091D3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "template_swagger", "template_swagger\template_swagger.csproj", "{92C3C1C8-7CA5-4945-B4DA-0FFE39E0F91F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9EA997BE-C59A-415D-A14C-A5185648F5CB}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Share", "Share\Share.csproj", "{6AF1EC87-418A-4647-B263-FBA853A5CB22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +37,10 @@ Global
 		{92C3C1C8-7CA5-4945-B4DA-0FFE39E0F91F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92C3C1C8-7CA5-4945-B4DA-0FFE39E0F91F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92C3C1C8-7CA5-4945-B4DA-0FFE39E0F91F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AF1EC87-418A-4647-B263-FBA853A5CB22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AF1EC87-418A-4647-B263-FBA853A5CB22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AF1EC87-418A-4647-B263-FBA853A5CB22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AF1EC87-418A-4647-B263-FBA853A5CB22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

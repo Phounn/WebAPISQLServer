@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Migrations
 {
     [DbContext(typeof(ContosoPizzaContext))]
-    [Migration("20250120072101_ProductDBInitilize")]
-    partial class ProductDBInitilize
+    [Migration("20250121034259_InitilizeCreate")]
+    partial class InitilizeCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,7 +25,7 @@ namespace Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Data.Models.Customer", b =>
+            modelBuilder.Entity("Share.Entities.Customer", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -55,7 +55,7 @@ namespace Data.Migrations
                     b.ToTable("Customers");
                 });
 
-            modelBuilder.Entity("Data.Models.Order", b =>
+            modelBuilder.Entity("Share.Entities.Order", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -79,7 +79,7 @@ namespace Data.Migrations
                     b.ToTable("Orders");
                 });
 
-            modelBuilder.Entity("Data.Models.OrderDetail", b =>
+            modelBuilder.Entity("Share.Entities.OrderDetail", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -105,7 +105,7 @@ namespace Data.Migrations
                     b.ToTable("OrderDetails");
                 });
 
-            modelBuilder.Entity("Data.Models.Product", b =>
+            modelBuilder.Entity("Share.Entities.Product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -125,9 +125,9 @@ namespace Data.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("Data.Models.Order", b =>
+            modelBuilder.Entity("Share.Entities.Order", b =>
                 {
-                    b.HasOne("Data.Models.Customer", "Customer")
+                    b.HasOne("Share.Entities.Customer", "Customer")
                         .WithMany("Orders")
                         .HasForeignKey("CustomerId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -136,15 +136,15 @@ namespace Data.Migrations
                     b.Navigation("Customer");
                 });
 
-            modelBuilder.Entity("Data.Models.OrderDetail", b =>
+            modelBuilder.Entity("Share.Entities.OrderDetail", b =>
                 {
-                    b.HasOne("Data.Models.Order", "Order")
+                    b.HasOne("Share.Entities.Order", "Order")
                         .WithMany("OrderDetails")
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Data.Models.Product", "Product")
+                    b.HasOne("Share.Entities.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -155,12 +155,12 @@ namespace Data.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("Data.Models.Customer", b =>
+            modelBuilder.Entity("Share.Entities.Customer", b =>
                 {
                     b.Navigation("Orders");
                 });
 
-            modelBuilder.Entity("Data.Models.Order", b =>
+            modelBuilder.Entity("Share.Entities.Order", b =>
                 {
                     b.Navigation("OrderDetails");
                 });
