@@ -2,6 +2,9 @@ using APIGateWay;
 using Data.Data;
 using Microsoft.EntityFrameworkCore;
 using Data.InitializeDB;
+using Data.Repositories.Interface;
+using Data.Repositories;
+using Share.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +26,8 @@ app.Run();
 
 static void Services(WebApplicationBuilder builder)
 {
+    builder.Services.AddScoped<IProductRepository, ProductRepository>();
+    builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
     builder.Services.AddSwaggerGen();
     builder.Services.AddControllers();
     builder.Services.AddSingleton<ITaskInitializer, TasksInitializer>();
